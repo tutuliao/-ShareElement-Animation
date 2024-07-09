@@ -22,18 +22,15 @@ package com.example.android.activityscenetransitionbasic;
  */
 public class Item {
 
-    private static final String LARGE_BASE_URL = "https://storage.googleapis.com/androiddevelopers/sample_data/activity_transition/large/";
-    private static final String THUMB_BASE_URL = "https://storage.googleapis.com/androiddevelopers/sample_data/activity_transition/thumbs/";
-
     public static Item[] ITEMS = new Item[] {
-            new Item("Flying in the Light", "Romain Guy", "flying_in_the_light.jpg"),
-            new Item("Caterpillar", "Romain Guy", "caterpillar.jpg"),
-            new Item("Look Me in the Eye", "Romain Guy", "look_me_in_the_eye.jpg"),
-            new Item("Flamingo", "Romain Guy", "flamingo.jpg"),
-            new Item("Rainbow", "Romain Guy", "rainbow.jpg"),
-            new Item("Over there", "Romain Guy", "over_there.jpg"),
-            new Item("Jelly Fish 2", "Romain Guy", "jelly_fish_2.jpg"),
-            new Item("Lone Pine Sunset", "Romain Guy", "lone_pine_sunset.jpg"),
+            new Item("Flying in the Light", "Romain Guy", R.drawable.image1),
+            new Item("Caterpillar", "Romain Guy", R.drawable.image2),
+            new Item("Look Me in the Eye", "Romain Guy", R.drawable.image3),
+            new Item("Flamingo", "Romain Guy", R.drawable.image4),
+            new Item("Rainbow", "Romain Guy", R.drawable.image5),
+            new Item("Over there", "Romain Guy", R.drawable.image6),
+            new Item("Jelly Fish 2", "Romain Guy", R.drawable.image7),
+            new Item("Lone Pine Sunset", "Romain Guy", R.drawable.image8),
     };
 
     public static Item getItem(int id) {
@@ -47,16 +44,16 @@ public class Item {
 
     private final String mName;
     private final String mAuthor;
-    private final String mFileName;
+    private final int mImageResId;
 
-    Item (String name, String author, String fileName) {
+    Item(String name, String author, int imageResId) {
         mName = name;
         mAuthor = author;
-        mFileName = fileName;
+        mImageResId = imageResId;
     }
 
     public int getId() {
-        return mName.hashCode() + mFileName.hashCode();
+        return mName.hashCode() + mImageResId;
     }
 
     public String getAuthor() {
@@ -67,12 +64,7 @@ public class Item {
         return mName;
     }
 
-    public String getPhotoUrl() {
-        return LARGE_BASE_URL + mFileName;
+    public int getImageResId() {
+        return mImageResId;
     }
-
-    public String getThumbnailUrl() {
-        return THUMB_BASE_URL + mFileName;
-    }
-
 }

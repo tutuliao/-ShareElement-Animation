@@ -49,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
         grid.setOnItemClickListener(mOnItemClickListener);
         GridAdapter adapter = new GridAdapter();
         grid.setAdapter(adapter);
-
     }
 
     private final AdapterView.OnItemClickListener mOnItemClickListener
@@ -66,18 +65,11 @@ public class MainActivity extends AppCompatActivity {
             // Construct an Intent as normal
             Intent intent = new Intent(MainActivity.this, DetailActivity.class);
             intent.putExtra(DetailActivity.EXTRA_PARAM_ID, item.getId());
-
-            //不同图
-            intent.putExtra("image", "image1");
-            //相同图
-            intent.putExtra("same", item.getThumbnailUrl());
+            intent.putExtra("imageResId", item.getImageResId());
 
             @SuppressWarnings("unchecked")
             ActivityOptionsCompat activityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(
                     MainActivity.this,
-
-                    // Now we provide a list of Pair items which contain the view we can transitioning
-                    // from, and the name of the view it is transitioning to, in the launched activity
                     new Pair<>(view.findViewById(R.id.imageview_item),
                             DetailActivity.VIEW_NAME_HEADER_IMAGE),
                     new Pair<>(view.findViewById(R.id.textview_name),
@@ -117,16 +109,9 @@ public class MainActivity extends AppCompatActivity {
 
             // Load the thumbnail image
             ImageView image = view.findViewById(R.id.imageview_item);
-
-            //不同图
             Glide.with(image.getContext())
-                    .load(item.getThumbnailUrl())
+                    .load(item.getImageResId())
                     .into(image);
-
-            //相同图
-            //Glide.with(image.getContext())
-            //        .load(R.drawable.image1)
-            //        .into(image);
 
             // Set the TextView's contents
             TextView name = view.findViewById(R.id.textview_name);

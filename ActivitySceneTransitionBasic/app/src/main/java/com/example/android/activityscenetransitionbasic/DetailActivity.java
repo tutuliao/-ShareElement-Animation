@@ -19,7 +19,6 @@ package com.example.android.activityscenetransitionbasic;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.transition.Transition;
 import android.widget.ImageView;
@@ -45,17 +44,9 @@ public class DetailActivity extends AppCompatActivity {
     // View name of the header title. Used for activity scene transitions
     public static final String VIEW_NAME_HEADER_TITLE = "detail:header:title";
 
-    public static final String VIEW_NAME_TRANSPORT_IMAGE = "detail:header:transport";
-
     private ImageView mHeaderImageView;
-    private TextView mHeaderTitle;
 
     private Item mItem;
-
-    //两种图片
-    public String ImageResourceName;
-    public int imageResourceId;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,65 +58,35 @@ public class DetailActivity extends AppCompatActivity {
         mHeaderImageView = findViewById(R.id.imageview_header);
         ViewCompat.setTransitionName(mHeaderImageView, VIEW_NAME_HEADER_IMAGE);
 
-        //不同图片
-        ImageResourceName = getIntent().getStringExtra("image");
-        imageResourceId = getResources().getIdentifier(ImageResourceName, "drawable", getPackageName());
+        // Load the image resource ID passed from MainActivity
+        int imageResourceId = getIntent().getIntExtra("imageResId", -1);
 
-        //
-        loadItem();
+        if (imageResourceId != -1) {
+            loadItem(imageResourceId);
+        }
     }
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-        ObjectAnimator animator = ObjectAnimator.ofFloat(mHeaderImageView, "alpha", 1f, 0f);
-        animator.setDuration(500); // 1秒钟的时间
-        animator.start();
-
-        animator.addListener(new AnimatorListenerAdapter() {
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                if (isFinishing()) return;
-                DetailActivity.super.onBackPressed();
-            }
-        });
+        supportFinishAfterTransition();
     }
 
-    public boolean areImagesEqual(Bitmap bitmap1, Bitmap bitmap2) {
-        if (bitmap1 == null || bitmap2 == null) {
-            return false;
-        }
-
-        if (bitmap1.getWidth() != bitmap2.getWidth() || bitmap1.getHeight() != bitmap2.getHeight()) {
-            return false;
-        }
-
-        for (int x = 0; x < bitmap1.getWidth(); x++) {
-            for (int y = 0; y < bitmap1.getHeight(); y++) {
-                if (bitmap1.getPixel(x, y) != bitmap2.getPixel(x, y)) {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-
-    private void loadItem() {
+    private void loadItem(int imageResourceId) {
         if (addTransitionListener()) {
             // If we're running on Lollipop and we have added a listener to the shared element
             // transition, load the thumbnail. The listener will load the full-size image when
             // the transition is complete.
-            loadThumbnail();
+            loadThumbnail(imageResourceId);
         } else {
             // If all other cases we should just load the full-size image now
-            loadFullSizeImage();
+            loadFullSizeImage(imageResourceId);
         }
     }
 
     /**
      * Load the item's thumbnail image into our {@link ImageView}.
      */
-    private void loadThumbnail() {
+    private void loadThumbnail(int imageResourceId) {
         ObjectAnimator alphaAnimator = ObjectAnimator.ofFloat(mHeaderImageView, "alpha", 0f, 1f);
         alphaAnimator.setDuration(500);
         alphaAnimator.start();
@@ -134,16 +95,15 @@ public class DetailActivity extends AppCompatActivity {
                 .load(imageResourceId)
                 .into(mHeaderImageView);
     }
-    
+
     /**
      * Load the item's full-size image into our {@link ImageView}.
      */
-    private void loadFullSizeImage() {
+    private void loadFullSizeImage(int imageResourceId) {
         Glide.with(mHeaderImageView.getContext())
                 .load(imageResourceId)
                 .transition(DrawableTransitionOptions.withCrossFade())
                 .into(mHeaderImageView);
-
     }
 
     /**
@@ -162,18 +122,16 @@ public class DetailActivity extends AppCompatActivity {
             transition.addListener(new Transition.TransitionListener() {
                 @Override
                 public void onTransitionEnd(Transition transition) {
-                    // As the transition has ended, we can now load the full-size image
-
-
-                    // Make sure we remove ourselves as a listener
 
                 }
 
                 @Override
                 public void onTransitionStart(Transition transition) {
-                    loadThumbnail();
+                    // As the transition has ended, we can now load the full-size image
+                    loadFullSizeImage(getIntent().getIntExtra("imageResId", -1));
+
+                    // Make sure we remove ourselves as a listener
                     transition.removeListener(this);
-                    // No-op
                 }
 
                 @Override
@@ -199,4 +157,3 @@ public class DetailActivity extends AppCompatActivity {
         return false;
     }
 }
-
