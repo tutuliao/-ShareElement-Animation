@@ -1,0 +1,5 @@
+<!-- res/transition/fade.xml -->
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android">
+    <fade android:fadingMode="fade_in" android:duration="500" />
+    <fade android:fadingMode="fade_out" android:duration="500" />
+</transitionSet>

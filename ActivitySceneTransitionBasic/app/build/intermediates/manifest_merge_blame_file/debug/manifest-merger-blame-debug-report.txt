@@ -1,0 +1,91 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3 Copyright 2019 Google LLC
+4
+5 Licensed under the Apache License, Version 2.0 (the "License");
+6 you may not use this file except in compliance with the License.
+7 You may obtain a copy of the License at
+8
+9     http://www.apache.org/licenses/LICENSE-2.0
+10
+11 Unless required by applicable law or agreed to in writing, software
+12 distributed under the License is distributed on an "AS IS" BASIS,
+13 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+14 See the License for the specific language governing permissions and
+15 limitations under the License.
+16-->
+17<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+18    package="com.example.android.activityscenetransitionbasic"
+19    android:versionCode="1"
+20    android:versionName="1.0" >
+21
+22    <uses-sdk
+23        android:minSdkVersion="26"
+23-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml
+24        android:targetSdkVersion="34" />
+24-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml
+25
+26    <uses-permission android:name="android.permission.INTERNET" />
+26-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:20:5-67
+26-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:20:22-64
+27
+28    <application
+28-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:22:5-40:19
+29        android:allowBackup="false"
+29-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:23:9-36
+30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+30-->[androidx.core:core:1.7.0] /Users/jacky/.gradle/caches/transforms-3/249713548fb8d92d9c56becf07cdffea/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+31        android:debuggable="true"
+32        android:extractNativeLibs="false"
+33        android:icon="@drawable/ic_launcher"
+33-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:24:9-45
+34        android:label="@string/app_name"
+34-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:25:9-41
+35        android:testOnly="true"
+36        android:theme="@style/AppTheme" >
+36-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:26:9-40
+37        <activity
+37-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:29:9-36:20
+38            android:name="com.example.android.activityscenetransitionbasic.MainActivity"
+38-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:30:13-41
+39            android:exported="true" >
+39-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:31:13-36
+40            <intent-filter>
+40-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:32:13-35:29
+41                <action android:name="android.intent.action.MAIN" />
+41-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:33:17-69
+41-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:33:25-66
+42
+43                <category android:name="android.intent.category.LAUNCHER" />
+43-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:34:17-77
+43-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:34:27-74
+44            </intent-filter>
+45        </activity>
+46        <activity android:name="com.example.android.activityscenetransitionbasic.DetailActivity" />
+46-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:38:9-52
+46-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:38:19-49
+47
+48        <provider
+48-->[androidx.emoji2:emoji2:1.0.0] /Users/jacky/.gradle/caches/transforms-3/deb2977a7cc7baff4388183fe02413e9/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+49            android:name="androidx.startup.InitializationProvider"
+49-->[androidx.emoji2:emoji2:1.0.0] /Users/jacky/.gradle/caches/transforms-3/deb2977a7cc7baff4388183fe02413e9/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
+50            android:authorities="com.example.android.activityscenetransitionbasic.androidx-startup"
+50-->[androidx.emoji2:emoji2:1.0.0] /Users/jacky/.gradle/caches/transforms-3/deb2977a7cc7baff4388183fe02413e9/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
+51            android:exported="false" >
+51-->[androidx.emoji2:emoji2:1.0.0] /Users/jacky/.gradle/caches/transforms-3/deb2977a7cc7baff4388183fe02413e9/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
+52            <meta-data
+52-->[androidx.emoji2:emoji2:1.0.0] /Users/jacky/.gradle/caches/transforms-3/deb2977a7cc7baff4388183fe02413e9/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+53                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+53-->[androidx.emoji2:emoji2:1.0.0] /Users/jacky/.gradle/caches/transforms-3/deb2977a7cc7baff4388183fe02413e9/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+54                android:value="androidx.startup" />
+54-->[androidx.emoji2:emoji2:1.0.0] /Users/jacky/.gradle/caches/transforms-3/deb2977a7cc7baff4388183fe02413e9/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+55            <meta-data
+55-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/jacky/.gradle/caches/transforms-3/cd6e54f1b89943b093f18df670cdc9a6/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+56                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+56-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/jacky/.gradle/caches/transforms-3/cd6e54f1b89943b093f18df670cdc9a6/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+57                android:value="androidx.startup" />
+57-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/jacky/.gradle/caches/transforms-3/cd6e54f1b89943b093f18df670cdc9a6/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+58        </provider>
+59    </application>
+60
+61</manifest>
