@@ -21,49 +21,49 @@
 21
 22    <uses-sdk
 23        android:minSdkVersion="26"
-23-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml
+23-->/Users/jacky/Desktop/-ShareElement-Animation/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml
 24        android:targetSdkVersion="34" />
-24-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml
+24-->/Users/jacky/Desktop/-ShareElement-Animation/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml
 25
 26    <uses-permission android:name="android.permission.INTERNET" />
-26-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:20:5-67
-26-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:20:22-64
+26-->/Users/jacky/Desktop/-ShareElement-Animation/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:20:5-67
+26-->/Users/jacky/Desktop/-ShareElement-Animation/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:20:22-64
 27
 28    <application
-28-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:22:5-40:19
+28-->/Users/jacky/Desktop/-ShareElement-Animation/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:22:5-40:19
 29        android:allowBackup="false"
-29-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:23:9-36
+29-->/Users/jacky/Desktop/-ShareElement-Animation/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:23:9-36
 30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 30-->[androidx.core:core:1.7.0] /Users/jacky/.gradle/caches/transforms-3/249713548fb8d92d9c56becf07cdffea/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
 31        android:debuggable="true"
 32        android:extractNativeLibs="false"
 33        android:icon="@drawable/ic_launcher"
-33-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:24:9-45
+33-->/Users/jacky/Desktop/-ShareElement-Animation/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:24:9-45
 34        android:label="@string/app_name"
-34-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:25:9-41
+34-->/Users/jacky/Desktop/-ShareElement-Animation/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:25:9-41
 35        android:testOnly="true"
 36        android:theme="@style/AppTheme" >
-36-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:26:9-40
+36-->/Users/jacky/Desktop/-ShareElement-Animation/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:26:9-40
 37        <activity
-37-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:29:9-36:20
+37-->/Users/jacky/Desktop/-ShareElement-Animation/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:29:9-36:20
 38            android:name="com.example.android.activityscenetransitionbasic.MainActivity"
-38-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:30:13-41
+38-->/Users/jacky/Desktop/-ShareElement-Animation/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:30:13-41
 39            android:exported="true" >
-39-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:31:13-36
+39-->/Users/jacky/Desktop/-ShareElement-Animation/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:31:13-36
 40            <intent-filter>
-40-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:32:13-35:29
+40-->/Users/jacky/Desktop/-ShareElement-Animation/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:32:13-35:29
 41                <action android:name="android.intent.action.MAIN" />
-41-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:33:17-69
-41-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:33:25-66
+41-->/Users/jacky/Desktop/-ShareElement-Animation/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:33:17-69
+41-->/Users/jacky/Desktop/-ShareElement-Animation/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:33:25-66
 42
 43                <category android:name="android.intent.category.LAUNCHER" />
-43-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:34:17-77
-43-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:34:27-74
+43-->/Users/jacky/Desktop/-ShareElement-Animation/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:34:17-77
+43-->/Users/jacky/Desktop/-ShareElement-Animation/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:34:27-74
 44            </intent-filter>
 45        </activity>
 46        <activity android:name="com.example.android.activityscenetransitionbasic.DetailActivity" />
-46-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:38:9-52
-46-->/Users/jacky/AndroidStudioProjects/animation-samples/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:38:19-49
+46-->/Users/jacky/Desktop/-ShareElement-Animation/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:38:9-52
+46-->/Users/jacky/Desktop/-ShareElement-Animation/ActivitySceneTransitionBasic/app/src/main/AndroidManifest.xml:38:19-49
 47
 48        <provider
 48-->[androidx.emoji2:emoji2:1.0.0] /Users/jacky/.gradle/caches/transforms-3/deb2977a7cc7baff4388183fe02413e9/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
