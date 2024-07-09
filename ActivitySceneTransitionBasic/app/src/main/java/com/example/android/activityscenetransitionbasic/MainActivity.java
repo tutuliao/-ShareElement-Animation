@@ -18,8 +18,6 @@ package com.example.android.activityscenetransitionbasic;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.transition.Transition;
-import android.transition.TransitionInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -27,14 +25,11 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.app.ActivityOptionsCompat;
 import androidx.core.util.Pair;
-
 import com.bumptech.glide.Glide;
-import com.squareup.picasso.Picasso;
 
 /**
  * Our main Activity in this sample. Displays a grid of items which an image and title. When the
@@ -47,15 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.grid);
-        // 加载fade转场动画
-        Transition fade = TransitionInflater.from(this).inflateTransition(R.transition.fade);
-        getWindow().setEnterTransition(fade);
-        getWindow().setExitTransition(fade);
-
         // Setup the GridView and set the adapter
         grid = findViewById(R.id.grid);
         grid.setOnItemClickListener(mOnItemClickListener);
@@ -79,8 +67,10 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, DetailActivity.class);
             intent.putExtra(DetailActivity.EXTRA_PARAM_ID, item.getId());
 
-            //修改
-            intent.putExtra("tg", "image1");
+            //不同图
+            intent.putExtra("image", "image1");
+            //相同图
+            intent.putExtra("same", item.getThumbnailUrl());
 
             @SuppressWarnings("unchecked")
             ActivityOptionsCompat activityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(
@@ -132,7 +122,6 @@ public class MainActivity extends AppCompatActivity {
             Glide.with(image.getContext())
                     .load(item.getThumbnailUrl())
                     .into(image);
-            Picasso.with(image.getContext()).load(item.getThumbnailUrl()).into(image);
 
             //相同图
             //Glide.with(image.getContext())

@@ -19,12 +19,9 @@ package com.example.android.activityscenetransitionbasic;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
-import android.os.Build;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.transition.Transition;
-import android.view.View;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.RequiresApi;
@@ -32,7 +29,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.ViewCompat;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
-import com.squareup.picasso.Picasso;
 
 /**
  * Our secondary Activity which is launched from {@link MainActivity}. Has a simple detail UI
@@ -56,9 +52,11 @@ public class DetailActivity extends AppCompatActivity {
 
     private Item mItem;
 
-    //修改
-    public String imageResourceName;
+    //两种图片
+    public String ImageResourceName;
     public int imageResourceId;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,19 +67,12 @@ public class DetailActivity extends AppCompatActivity {
         mHeaderImageView = findViewById(R.id.imageview_header);
         ViewCompat.setTransitionName(mHeaderImageView, VIEW_NAME_HEADER_IMAGE);
 
-        //ViewCompat.setTransitionName(mHeaderTitle, VIEW_NAME_HEADER_TITLE);
-        // END_INCLUDE(detail_set_view_name)
+        //不同图片
+        ImageResourceName = getIntent().getStringExtra("image");
+        imageResourceId = getResources().getIdentifier(ImageResourceName, "drawable", getPackageName());
 
-        //修改
-        imageResourceName = getIntent().getStringExtra("tg");
-        imageResourceId = getResources().getIdentifier(imageResourceName, "drawable", getPackageName());
         //
         loadItem();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
     }
 
     @Override
@@ -100,32 +91,23 @@ public class DetailActivity extends AppCompatActivity {
         });
     }
 
-    public static void fadeOutAnimation(final View view) {
-        // 创建淡出动画
-        AlphaAnimation fadeOutAnimation = new AlphaAnimation(1.0f, 0.0f);
-        // 设置淡出时间
-        fadeOutAnimation.setDuration(1000);
-        fadeOutAnimation.setFillAfter(true);
-        // 设置动画监听器
-        fadeOutAnimation.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-                // 动画开始时的操作
-            }
+    public boolean areImagesEqual(Bitmap bitmap1, Bitmap bitmap2) {
+        if (bitmap1 == null || bitmap2 == null) {
+            return false;
+        }
 
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-                // 动画重复时的操作
-            }
+        if (bitmap1.getWidth() != bitmap2.getWidth() || bitmap1.getHeight() != bitmap2.getHeight()) {
+            return false;
+        }
 
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                // 动画结束时的操作
-                view.setVisibility(View.GONE);
+        for (int x = 0; x < bitmap1.getWidth(); x++) {
+            for (int y = 0; y < bitmap1.getHeight(); y++) {
+                if (bitmap1.getPixel(x, y) != bitmap2.getPixel(x, y)) {
+                    return false;
+                }
             }
-        });
-        // 开始动画
-        view.startAnimation(fadeOutAnimation);
+        }
+        return true;
     }
 
     private void loadItem() {
