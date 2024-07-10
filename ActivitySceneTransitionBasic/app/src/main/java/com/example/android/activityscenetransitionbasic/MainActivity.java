@@ -44,6 +44,7 @@ import com.squareup.picasso.Picasso;
 public class MainActivity extends AppCompatActivity {
 
     GridView grid;
+    public static ImageView image;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -125,8 +126,7 @@ public class MainActivity extends AppCompatActivity {
 
             final Item item = getItem(position);
 
-            // Load the thumbnail image
-            ImageView image = view.findViewById(R.id.imageview_item);
+            image = view.findViewById(R.id.imageview_item);
 
             //不同图
             Glide.with(image.getContext())

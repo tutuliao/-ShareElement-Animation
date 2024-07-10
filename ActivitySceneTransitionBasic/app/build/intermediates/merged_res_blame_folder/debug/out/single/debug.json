@@ -1,43 +1,47 @@
 [
     {
-        "merged": "com.example.android.activityscenetransitionbasic.app-merged_res-18:/drawable-hdpi_ic_launcher.png.flat",
-        "source": "com.example.android.activityscenetransitionbasic.app-main-20:/drawable-hdpi/ic_launcher.png"
+        "merged": "/Users/jacky/.gradle/daemon/7.4/com.example.android.activityscenetransitionbasic.app-merged_res-18:/layout_grid.xml.flat",
+        "source": "/Users/jacky/.gradle/daemon/7.4/com.example.android.activityscenetransitionbasic.app-main-20:/layout/grid.xml"
     },
     {
-        "merged": "com.example.android.activityscenetransitionbasic.app-merged_res-18:/drawable-mdpi_ic_launcher.png.flat",
-        "source": "com.example.android.activityscenetransitionbasic.app-main-20:/drawable-mdpi/ic_launcher.png"
+        "merged": "/Users/jacky/.gradle/daemon/7.4/com.example.android.activityscenetransitionbasic.app-merged_res-18:/drawable-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/jacky/.gradle/daemon/7.4/com.example.android.activityscenetransitionbasic.app-main-20:/drawable-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "com.example.android.activityscenetransitionbasic.app-merged_res-18:/transition_grid_detail_transition.xml.flat",
-        "source": "com.example.android.activityscenetransitionbasic.app-main-20:/transition/grid_detail_transition.xml"
+        "merged": "/Users/jacky/.gradle/daemon/7.4/com.example.android.activityscenetransitionbasic.app-merged_res-18:/drawable-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/jacky/.gradle/daemon/7.4/com.example.android.activityscenetransitionbasic.app-main-20:/drawable-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "com.example.android.activityscenetransitionbasic.app-merged_res-18:/transition_fade.xml.flat",
-        "source": "com.example.android.activityscenetransitionbasic.app-main-20:/transition/fade.xml"
+        "merged": "/Users/jacky/.gradle/daemon/7.4/com.example.android.activityscenetransitionbasic.app-merged_res-18:/layout_grid_item.xml.flat",
+        "source": "/Users/jacky/.gradle/daemon/7.4/com.example.android.activityscenetransitionbasic.app-main-20:/layout/grid_item.xml"
     },
     {
-        "merged": "com.example.android.activityscenetransitionbasic.app-merged_res-18:/drawable-xhdpi_ic_launcher.png.flat",
-        "source": "com.example.android.activityscenetransitionbasic.app-main-20:/drawable-xhdpi/ic_launcher.png"
+        "merged": "/Users/jacky/.gradle/daemon/7.4/com.example.android.activityscenetransitionbasic.app-merged_res-18:/drawable-hdpi_tile.9.png.flat",
+        "source": "/Users/jacky/.gradle/daemon/7.4/com.example.android.activityscenetransitionbasic.app-main-20:/drawable-hdpi/tile.9.png"
     },
     {
-        "merged": "com.example.android.activityscenetransitionbasic.app-merged_res-18:/drawable-hdpi_tile.9.png.flat",
-        "source": "com.example.android.activityscenetransitionbasic.app-main-20:/drawable-hdpi/tile.9.png"
+        "merged": "/Users/jacky/.gradle/daemon/7.4/com.example.android.activityscenetransitionbasic.app-merged_res-18:/drawable_image1.jpg.flat",
+        "source": "/Users/jacky/.gradle/daemon/7.4/com.example.android.activityscenetransitionbasic.app-main-20:/drawable/image1.jpg"
     },
     {
-        "merged": "com.example.android.activityscenetransitionbasic.app-merged_res-18:/drawable_image1.jpg.flat",
-        "source": "com.example.android.activityscenetransitionbasic.app-main-20:/drawable/image1.jpg"
+        "merged": "/Users/jacky/.gradle/daemon/7.4/com.example.android.activityscenetransitionbasic.app-merged_res-18:/drawable-hdpi_ic_launcher.png.flat",
+        "source": "/Users/jacky/.gradle/daemon/7.4/com.example.android.activityscenetransitionbasic.app-main-20:/drawable-hdpi/ic_launcher.png"
     },
     {
-        "merged": "com.example.android.activityscenetransitionbasic.app-merged_res-18:/drawable-xxhdpi_ic_launcher.png.flat",
-        "source": "com.example.android.activityscenetransitionbasic.app-main-20:/drawable-xxhdpi/ic_launcher.png"
+        "merged": "/Users/jacky/.gradle/daemon/7.4/com.example.android.activityscenetransitionbasic.app-merged_res-18:/layout_details.xml.flat",
+        "source": "/Users/jacky/.gradle/daemon/7.4/com.example.android.activityscenetransitionbasic.app-main-20:/layout/details.xml"
     },
     {
-        "merged": "com.example.android.activityscenetransitionbasic.app-merged_res-18:/layout_grid_item.xml.flat",
-        "source": "com.example.android.activityscenetransitionbasic.app-main-20:/layout/grid_item.xml"
+        "merged": "/Users/jacky/.gradle/daemon/7.4/com.example.android.activityscenetransitionbasic.app-merged_res-18:/transition_grid_detail_transition.xml.flat",
+        "source": "/Users/jacky/.gradle/daemon/7.4/com.example.android.activityscenetransitionbasic.app-main-20:/transition/grid_detail_transition.xml"
     },
     {
-        "merged": "com.example.android.activityscenetransitionbasic.app-merged_res-18:/layout_grid.xml.flat",
-        "source": "com.example.android.activityscenetransitionbasic.app-main-20:/layout/grid.xml"
+        "merged": "/Users/jacky/.gradle/daemon/7.4/com.example.android.activityscenetransitionbasic.app-merged_res-18:/transition_fade.xml.flat",
+        "source": "/Users/jacky/.gradle/daemon/7.4/com.example.android.activityscenetransitionbasic.app-main-20:/transition/fade.xml"
+    },
+    {
+        "merged": "/Users/jacky/.gradle/daemon/7.4/com.example.android.activityscenetransitionbasic.app-merged_res-18:/drawable-mdpi_ic_launcher.png.flat",
+        "source": "/Users/jacky/.gradle/daemon/7.4/com.example.android.activityscenetransitionbasic.app-main-20:/drawable-mdpi/ic_launcher.png"
     },
     {
         "merged": "com.example.android.activityscenetransitionbasic.app-merged_res-18:/layout_details.xml.flat",
