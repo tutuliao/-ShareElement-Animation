@@ -625,6 +625,13 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable ic_launcher
 drawable image1
+drawable image2
+drawable image3
+drawable image4
+drawable image5
+drawable image6
+drawable image7
+drawable image8
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
